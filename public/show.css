@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container for Content */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Section */
+h2 {
+    color: #007bff; /* Blue color for emphasis */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Post Details Section */
+.post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+h3.user {
+    color: #007bff; /* Distinctive color for username */
+}
+
+h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+h4.content {
+    font-style: italic;
+    color: #555; /* Subtle color for post content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h3, h4 {
+        font-size: 1rem;
+    }
+}

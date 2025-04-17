@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/edit.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Your Post</h2>
+        <div class="post-info">
+            <p><strong>Post ID:</strong> <%=post.id%></p>
+            <p><strong>Username:</strong> @<%= post.username %></p>
+        </div>
+            <!--Here we want send Patch request so for that we will use "method-override" from "npmjs.com", require it and use query method-->
+        <form method="post" action="/posts/<%=post.id%>?_method=PATCH ">
+            <label for="content">Edit Content:</label>
+            <textarea id="content" name="content" rows="5" required><%= post.content %></textarea>
+            <button type="submit" class="btn-submit">Update Post</button>
+        </form>
+    </div>
+</body>
+</html>

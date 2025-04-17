@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindShare</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--after addding this css relation just stop server and then start-->
+</head>
+<body>
+    <header class="bg-success text-white py-3">
+        <div class="search">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/009/652/218/small/magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg" alt="Logo" class="logo" width=40px height=40px> <!-- Replace /images/logo.png with the actual path to your logo -->
+            <form action="/search" method="GET" class="form-inline">
+                <input type="text" name="query" placeholder="Search..." class="form-control mr-2" required>
+                <button type="button" class="btn btn-outline-light">Search</button>
+
+            </form>
+        </div>
+    </header>
+    <h1>MINDSHARE</h1>
+    <% for (post of posts){ %>
+        <div class="post">
+            <h2 class="user"><b><i><u>@<%= post.username %></u></i></b></h3>
+            <h4 class="content"><%=post.content %></h3>
+
+                <a href="http://localhost:8080/posts/<%=post.id%>" style="margin-left: 350px" class="btn btn-primary">View Post</a>
+
+                <a href="http://localhost:8080/posts/<%=post.id%>/edit" style="margin-left: 25px" class="btn btn-primary">Edit</a>
+
+                <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                    <button class="btn btn-primary">Delete</button>
+                </form>
+            </div>
+                <% } %> 
+            
+            <a href="http://localhost:8080/posts/new" style="margin-left:500px; margin-bottom:20px;" class="btn btn-primary">Add New Post</a>
+        
+        
+</body>
+</html>
