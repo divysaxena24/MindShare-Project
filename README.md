@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f54555b7-4173-4081-9e62-62ea38c8ec1e)MindShare
+MindShare
 MindShare is a platform designed to enable users to convey their messages to one another. The goal of the project is to provide an easy-to-use, efficient platform for sharing ideas, thoughts, and important messages with friends, colleagues, or anyone in your network.
 
 🚀 Features
